@@ -1,0 +1,18 @@
+type Employee{
+    id: ID!
+    name : String!
+    department : String!
+    salary : Float!
+}
+
+type Query{
+    getAllEmployees : [Employee]
+    getEmployeeById(id:ID!): Employee
+    getEmployeeByDepartment(department:String):[Employee]
+}
+
+type Mutation{
+    createEmployee(name:String! department:String! salary:Float!): Employee
+    updateEmployee(id:ID! name:String department:String salary:Float): Employee
+    deleteEmployee(id:ID!): Employee
+}
